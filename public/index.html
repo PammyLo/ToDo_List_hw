@@ -12,12 +12,13 @@
   <body>
     <div id="app">
       <ul>
-        <li v-for="(todo, index) in todos">
+        <li v-for="(todo, index) in todos"
+          v-bind:class="{'high-priority': todo.priority === 'high', 'low-priority': todo.priority === 'low'}">
           <span>{{ todo.name }}</span>
           <label for="high-priority">High priority</label>
-          <input type="radio" id="priority" value="high" v-model="todo.priority">
+          <input type="radio" class="high-priority" value="high" v-model="todo.priority">
           <label for="low-priority">Low priority</label>
-          <input type="radio" id="priority" value="low" v-model="todo.priority">
+          <input type="radio" class="low-priority" value="low" v-model="todo.priority">
         </li>
       </ul>
 
