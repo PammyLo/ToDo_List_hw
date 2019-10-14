@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/bundle.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="action in actions">
+          <span>{{ action }}</span>
+        </li>
+      </ul>
+
+
+    </div>
+  </body>
+
+</html>
